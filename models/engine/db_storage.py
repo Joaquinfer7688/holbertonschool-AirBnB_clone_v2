@@ -69,10 +69,3 @@ class DBStorage():
                                expire_on_commit=False)
         Session = scoped_session(factory)
         self.__session = Session()
-
-    def close(self):
-        """
-         public method call remove() method on the private session attribute
-        """
-        self.reload()
-        self.__session.close()
